@@ -81,7 +81,7 @@ git clone https://github.com/kevinshen56714/SkyOffice.git my-folder-name
 To start a server, go into the project folder and install dependencies/run start command:
 
 ```bash
-cd SkyOffice or 'my-folder-name'
+cd SkyOffice or 'my-folder-name_'
 npm install && npm run start
 ```
 
