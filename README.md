@@ -11,3 +11,10 @@ GAS_REPORT=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+
+cd .\frontend\
+npm run start
+
+cd .\frontend\client\
+npm run start
