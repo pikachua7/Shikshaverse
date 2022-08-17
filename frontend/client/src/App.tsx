@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { useAppSelector } from './hooks'
 
 import Home from './components/Home'
+import Map from './components/Map'
 import RoomSelectionDialog from './components/RoomSelectionDialog'
 import LoginDialog from './components/LoginDialog'
 import ComputerDialog from './components/ComputerDialog'
@@ -48,7 +49,12 @@ function App() {
     ui = <LoginDialog />
   } else {
     /* Render RoomSelectionDialog if yet selected a room. */
-    ui = <RoomSelectionDialog />
+
+
+    //trying it out
+   // ui = <RoomSelectionDialog />
+    ui = <Map/>
+
   }
 
   return (

@@ -10,3 +10,4 @@ export interface IRoomData {
   password: string | null
   autoDispose: boolean
 }
+
