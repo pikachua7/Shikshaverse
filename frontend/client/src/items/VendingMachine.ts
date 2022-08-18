@@ -9,6 +9,6 @@ export default class VendingMachine extends Item {
   }
 
   onOverlapDialog() {
-    this.setDialogBox('Press R to 3D View :)')
+    this.setDialogBox('Press R to make tour :)')
   }
 }
