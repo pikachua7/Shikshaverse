@@ -12,6 +12,18 @@ import Slide from '@material-ui/core/Slide';
 import ReactTooltip from 'react-tooltip';
 import StateChart from './StateChart';
 
+//import 'regenerator-runtime/runtime'
+//import ReactDOM from 'react-dom'
+//import { Provider } from 'react-redux'
+//import { ThemeProvider } from '@mui/material/styles'
+
+//import './index.scss'
+//import './PhaserGame'
+//import muiTheme from './MuiTheme'
+//import reportWebVitals from './reportWebVitals'
+//import store from './stores'
+///import App from './App';
+
 const useStyles = makeStyles(theme => ({
     appBar: {
       position: 'relative',
@@ -44,9 +56,17 @@ const MapDialog = props => {
                     </Typography>
                 )}   
                 {DTName && (
+
+
                     <Typography variant="h6" className={classes.title}>
                         Selected District: {DTName}
                     </Typography>
+
+                    
+                    
+               
+
+                        
                 )}   
             </Toolbar>
             </AppBar>

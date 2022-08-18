@@ -1,9 +1,18 @@
 import React from 'react'
+import 'regenerator-runtime/runtime'
+
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { ThemeProvider } from '@mui/material/styles'
+
+
+
+
 import styled from 'styled-components'
 
 import { useAppSelector } from './hooks'
 
-import Home from './components/Home'
+///import Home from './components/Home'
 
 import RoomSelectionDialog from './components/RoomSelectionDialog'
 import LoginDialog from './components/LoginDialog'
@@ -19,7 +28,7 @@ const Backdrop = styled.div`
   width: 100%;
 `
 
-function App() {
+function Main() {
   const loggedIn = useAppSelector((state) => state.user.loggedIn)
   const computerDialogOpen = useAppSelector((state) => state.computer.computerDialogOpen)
   const whiteboardDialogOpen = useAppSelector((state) => state.whiteboard.whiteboardDialogOpen)
@@ -49,7 +58,7 @@ function App() {
       ui = <LoginDialog />
   } else {
     /* Render RoomSelectionDialog if yet selected a room. */
-    
+
 
     //trying it out
    ui = <RoomSelectionDialog />
@@ -66,4 +75,4 @@ function App() {
   )
 }
 
-export default App
+export default Main
