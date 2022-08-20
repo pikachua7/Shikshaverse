@@ -1,8 +1,48 @@
 import React from 'react'
-
+import { useState } from 'react'
+import Carousel from 'react-bootstrap/Carousel'
 function AboutPage() {
+
+
+    const [index, setIndex] = useState(0)
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex)
+  }
   return (
     <>
+
+<Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <img className="d-block w-100" src="img/carousel-1.jpg" alt="First slide" />
+          <Carousel.Caption>
+            <h2 style={{ color: 'white' }}>A platform for Indian Colleges</h2>
+            <p>Tour Indian colleges virtually.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="img/carousel-2.jpg" alt="Second slide" />
+
+          <Carousel.Caption>
+            <h2 style={{ color: 'white' }}>College Facilities</h2>
+            <p>View College Facilities from the comfort of your homes.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="img/carousel-3.jpg" alt="Third slide" />
+
+          <Carousel.Caption>
+            <h2 style={{ color: 'white' }}>Experience the college atmosphere</h2>
+            <p>View the college atmosphere virtually like never before.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+
+
+
+
+
+      
     <div className="container-xxl py-5">
         <div className="container">
             <div className="row g-4">
