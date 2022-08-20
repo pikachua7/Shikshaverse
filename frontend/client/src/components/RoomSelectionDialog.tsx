@@ -44,7 +44,7 @@ const CustomRoomWrapper = styled.div`
   justify-content: center;
 
   .tip {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
 
@@ -55,7 +55,7 @@ const BackButtonWrapper = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 16px;
   color: #eee;
   text-align: center;
 `
@@ -79,7 +79,7 @@ const ProgressBarWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  h3 {
+  h4 {
     color: #33ac96;
   }
 `
@@ -116,10 +116,7 @@ export default function RoomSelectionDialog() {
   if(!stateSelected){
     return (
       <>
-      <h1>Home Page of Shikshaverse</h1>
-      <h1>TASK 1 : Map ka photo dalna ek do aur if else laga ke idhar hi ghata krneka</h1>
-      <h1>Niche button dikhri hai ? Daba diya ?  Nai dabana tha ab ek aisa illusion banana h ki apan ne bharat map pr click krke state open kiya hai</h1>
-      <h1>Ab kahe wait kr raha hai be daba button</h1>
+      
       <button onClick={handleStateSelection}>Select State</button>
       </>
     )

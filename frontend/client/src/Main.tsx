@@ -9,7 +9,7 @@ import { ThemeProvider } from '@mui/material/styles'
 
 
 import styled from 'styled-components'
-
+///import './index.scss'
 import { useAppSelector } from './hooks'
 
 ///import Home from './components/Home'
