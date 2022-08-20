@@ -27,7 +27,7 @@ function ProRoutes() {
        <Route exact path="/map" element={<Map/>}/>
        <Route exact path="/tour" element={<Provider store={store}>
                                     <ThemeProvider theme={muiTheme}>
-                                            <Main />
+                                            <Main/>
                                             </ThemeProvider>
                                             </Provider>}/>
     </Routes>

@@ -53,6 +53,7 @@ function HomePage() {
       </div>
 
       <div className="container-xl py-5">
+      <h5 className='text-primary'>What is Shikshaverse ?</h5>
         <p>
           Our team Aatmanirbhar has proposed the solution “Shikshaverse” for the given problem
           statement by AICTE. The term “Shikshaverse” is inspired by the term “Metaverse” which is a
@@ -76,7 +77,7 @@ function HomePage() {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary px-3">Our Team</h6>
+            <h6 className="section-title text-center text-primary px-3">Our Team</h6>
           </div>
           <div className="row g-4">
             <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -182,8 +183,8 @@ function HomePage() {
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
           <div className="text-center">
-            <h6 className="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-            <h1 className="mb-5">Our Users Say !</h1>
+            <h6 className="section-title text-center text-primary px-3">Testimonial</h6>
+            <h5 className="mb-5">Our Users Say !</h5>
           </div>
           <div className="owl-carousel testimonial-carousel position-relative">
             <div className="testimonial-item text-center">

@@ -25,7 +25,7 @@ import { Button } from '@mui/material'
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: 'relative',
-    backgroundColor: '#509609',
+    backgroundColor: '#ffffff',
   },
   title: {
     marginLeft: theme.spacing(2),

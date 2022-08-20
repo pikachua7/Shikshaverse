@@ -16,6 +16,7 @@ import { useAppSelector } from '../hooks'
 
 import phaserGame from '../PhaserGame'
 import Bootstrap from '../scenes/Bootstrap'
+import Footer from '../Footer'
 
 const Backdrop = styled.div`
   position: absolute;
@@ -151,7 +152,7 @@ export default function RoomSelectionDialog() {
           </table>
         </div>
 
-        
+        <Footer/>
       </>
     )
   } else {

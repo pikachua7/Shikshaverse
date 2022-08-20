@@ -1,9 +1,11 @@
 import React from 'react'
 import 'regenerator-runtime/runtime'
-
+import { useLocation } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@mui/material/styles'
+
+
 
 
 
@@ -35,6 +37,10 @@ function Main() {
   const videoConnected = useAppSelector((state) => state.user.videoConnected)
   const roomJoined = useAppSelector((state) => state.room.roomJoined)
 
+
+
+  //const location = useLocation()
+  ///const city = location.state
   let ui: JSX.Element
   if (loggedIn) {
     if (computerDialogOpen) {
@@ -62,6 +68,7 @@ function Main() {
 
     //trying it out
    ui = <RoomSelectionDialog />
+
      /// ui = <Map/>
 
   }
@@ -69,6 +76,7 @@ function Main() {
   return (
     <Backdrop>
       {ui}
+     
       {/* Render HelperButtonGroup if no dialogs are opened. */}
       {!computerDialogOpen && !whiteboardDialogOpen && <HelperButtonGroup />}
     </Backdrop>
