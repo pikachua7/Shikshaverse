@@ -16,6 +16,7 @@ import { useAppSelector } from '../hooks'
 
 import phaserGame from '../PhaserGame'
 import Bootstrap from '../scenes/Bootstrap'
+import Footer from '../Footer'
 
 const Backdrop = styled.div`
   position: absolute;
@@ -44,7 +45,7 @@ const CustomRoomWrapper = styled.div`
   justify-content: center;
 
   .tip {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
 
@@ -55,7 +56,7 @@ const BackButtonWrapper = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 16px;
   color: #eee;
   text-align: center;
 `
@@ -79,7 +80,7 @@ const ProgressBarWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  h3 {
+  h4 {
     color: #33ac96;
   }
 `
@@ -109,18 +110,49 @@ export default function RoomSelectionDialog() {
   }
 
   const handleStateSelection = () => {
-    setState(true);
+    setState(true)
   }
 
-
-  if(!stateSelected){
+  if (!stateSelected) {
     return (
       <>
-      <h1>Home Page of Shikshaverse</h1>
-      <h1>TASK 1 : Map ka photo dalna ek do aur if else laga ke idhar hi ghata krneka</h1>
-      <h1>Niche button dikhri hai ? Daba diya ?  Nai dabana tha ab ek aisa illusion banana h ki apan ne bharat map pr click krke state open kiya hai</h1>
-      <h1>Ab kahe wait kr raha hai be daba button</h1>
-      <button onClick={handleStateSelection}>Select State</button>
+          <div className="container-xl py-3" style={{marginTop:'20px',backgroundColor:"white",textAlign:'center'}}>
+                <h4>List Of Colleges</h4>
+          </div>
+        <div className="container-xl" style={{marginTop:'20px'}}>
+          <table className="table">
+            <thead className="thead-dark">
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Virtual Tour Link</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Indian Intstitute Of Technology Bombay</td>
+                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
+                
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>VJTI</td>
+                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
+                
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>D.Y Patil College of Engineering.</td>
+                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
+               
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <Footer/>
       </>
     )
   } else {
@@ -177,19 +209,23 @@ export default function RoomSelectionDialog() {
               </CustomRoomWrapper>
             ) : (
               <>
-                <Title>Welcome to ShikshaVerse! Do options hona ek for university login aur dusra for samanya janta</Title>
+                <Title>
+                  Welcome to ShikshaVerse! Do options hona ek for university login aur dusra for
+                  samanya janta
+                </Title>
                 <Content>
                   <img src={logo} alt="logo" />
                   <Button variant="contained" color="secondary" onClick={handleConnect}>
-                    Open Lobby -  Yeh option kisi kaam ka nai hai hata do isko
+                    Open Lobby - Yeh option kisi kaam ka nai hai hata do isko
                   </Button>
                   <Button
-                  variant="contained"
-                  color="secondary"
-                  onClick={() => setShowCreateRoomForm(true)}
-                >
-                  Create a New College - This opetion should be available only if connected wallet has a NFT issued by govt which proves that its a univeristy
-                </Button>
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => setShowCreateRoomForm(true)}
+                  >
+                    Create a New College - This opetion should be available only if connected wallet
+                    has a NFT issued by govt which proves that its a univeristy
+                  </Button>
                   <Button
                     variant="outlined"
                     color="secondary"
@@ -197,7 +233,6 @@ export default function RoomSelectionDialog() {
                   >
                     See College List in Maharashtra
                   </Button>
-                  
                 </Content>
               </>
             )}
@@ -212,5 +247,4 @@ export default function RoomSelectionDialog() {
       </>
     )
   }
-
 }
