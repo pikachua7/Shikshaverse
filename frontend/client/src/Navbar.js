@@ -13,10 +13,12 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
                 <Link to="/" className="nav-item nav-link active">Home</Link>
-                <Link to="/about" className="nav-item nav-link">About Us</Link>
-                
-                <Link to="/contact" className="nav-item nav-link ">Contact</Link>
+                <Link to="/about" className="nav-item nav-link active">About Us</Link>
+                <Link to="/contact" className="nav-item nav-link active ">Contact</Link>
+                <Link to="/map" className="nav-item nav-link active" style={{color:'blue'}}>Start Tour</Link>
+
             </div>
+
             
         </div>
     </nav>

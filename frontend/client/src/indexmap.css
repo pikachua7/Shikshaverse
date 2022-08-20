@@ -13,10 +13,6 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 }
 
 #root {
-    background-color: #6071db;
+    background-color: #beecf3;
 }
 
-html {
-    background-color: black;
-    min-height: 100vh;
-}

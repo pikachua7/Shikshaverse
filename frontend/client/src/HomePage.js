@@ -92,7 +92,7 @@ function HomePage() {
 
     
 
-    <div className="container-xxl py-5">
+    <div className="container-xl py-5">
         <p>Our team Aatmanirbhar has proposed the solution “Shikshaverse” for the given problem statement by AICTE. 
             The term “Shikshaverse” is inspired by the term “Metaverse” which is a future evolution of the Internet based on shared virtual worlds. 
             Metaverse combines the capabilities of virtual reality, Blockchain, and NFT technology to create a virtual space.

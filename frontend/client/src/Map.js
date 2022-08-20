@@ -9,17 +9,19 @@ import Typography from '@material-ui/core/Typography';
 const Map = () => {
   return (
     <>
-      <AppBar style={{ poāsition: 'relative',background:'#ffffff'}}>
-        <Toolbar>
-          <Typography variant="h6" style={{ marginLeft: '2px', flex:1,textAlign:'center',color:'#000000'}}>
-              Select a State From Map Below
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <CssBaseline />
-      <Container maxWidth="md">
-          <AreaSelector />
-      </Container>
+
+    <div className="container-xl py-3" style={{backgroundColor:"white",marginTop:"50px"}}>
+          <h4>
+            Select a State from Map Below
+          </h4>
+          <p>Just Hover Over different States and to make a selection, simply Click. </p>
+    </div>
+      <div className="container-xl">
+
+      <AreaSelector />
+      </div>
+          
+      
     </>
   );
 }

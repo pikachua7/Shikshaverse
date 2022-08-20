@@ -53,14 +53,20 @@ function AboutPage() {
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style={{objectFit: "cover"}}/>
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/logo.png" alt="" style={{objectFit: "cover"}}/>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
                     <h1 class="mb-4">Welcome to शिक्षाVerse</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-4">Our team Aatmanirbhar has proposed the solution “Shikshaverse” for the given problem
+                        statement by AICTE.
+                        The term “Shikshaverse” is inspired by the term “Metaverse” which is a future evolution of
+                        the Internet based on shared virtual worlds. Metaverse combines the capabilities of virtual
+                        reality, Blockchain, and NFT technology to create a virtual space. The front end of the
+                        system “Shikshaverse” will be developed using ReactJs, HTML, CSS, and JavaScript.
+                        The smart contracts required at the backend would be developed using solidity programming
+                        language along with the necessary frameworks required for blockchain technology.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
