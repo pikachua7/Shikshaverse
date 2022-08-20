@@ -1,5 +1,5 @@
 import React from 'react';
-import AreaSelector from './components/AreaSelector';
+import AreaSelector from './AreaSelector';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,11 +8,11 @@ import Typography from '@material-ui/core/Typography';
 
 const Map = () => {
   return (
-    <React.Fragment style={{backgroundColor:'#2a2245'}}>
-      <AppBar style={{ poāsition: 'relative',background:'#ffffff',height:'50px'}}>
+    <>
+      <AppBar style={{ poāsition: 'relative',background:'#ffffff'}}>
         <Toolbar>
           <Typography variant="h6" style={{ marginLeft: '2px', flex:1,textAlign:'center',color:'#000000'}}>
-              Select A State
+              Select a State From Map Below
           </Typography>
         </Toolbar>
       </AppBar>
@@ -20,7 +20,7 @@ const Map = () => {
       <Container maxWidth="md">
           <AreaSelector />
       </Container>
-    </React.Fragment>
+    </>
   );
 }
 
