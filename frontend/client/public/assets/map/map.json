@@ -27381,7 +27381,20 @@
          "tilecount":1,
          "tileheight":72,
          "tilewidth":48
-        }],
+        },
+        {
+              "columns":1,
+              "firstgid":5488,
+              "image":"..\/items\/window.png",
+              "imageheight":48,
+              "imagewidth":64,
+              "margin":0,
+              "name":"window",
+              "spacing":0,
+              "tilecount":1,
+              "tileheight":48,
+              "tilewidth":64
+             }],
  "tilewidth":32,
  "type":"map",
  "version":"1.6",
