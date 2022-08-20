@@ -77,7 +77,7 @@ const MapDialog = (props) => {
 
 
               <Link to="/tour">
-                <Button style={{ backgroundColor: 'blue', color: 'white', float: 'right' }}>
+                <Button style={{ backgroundColor: '#614bcc', color: 'white', float: 'right',padding:'10px' }}>
                   View Colleges in {DTName}
                 </Button>
               </Link>

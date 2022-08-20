@@ -109,15 +109,49 @@ export default function RoomSelectionDialog() {
   }
 
   const handleStateSelection = () => {
-    setState(true);
+    setState(true)
   }
 
-
-  if(!stateSelected){
+  if (!stateSelected) {
     return (
       <>
-      
-      <button onClick={handleStateSelection}>Select State</button>
+          <div className="container-xl py-3" style={{marginTop:'20px',backgroundColor:"white",textAlign:'center'}}>
+                <h4>List Of Colleges</h4>
+          </div>
+        <div className="container-xl" style={{marginTop:'20px'}}>
+          <table className="table">
+            <thead className="thead-dark">
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Virtual Tour Link</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Indian Intstitute Of Technology Bombay</td>
+                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
+                
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>VJTI</td>
+                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
+                
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>D.Y Patil College of Engineering.</td>
+                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
+               
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        
       </>
     )
   } else {
@@ -174,19 +208,23 @@ export default function RoomSelectionDialog() {
               </CustomRoomWrapper>
             ) : (
               <>
-                <Title>Welcome to ShikshaVerse! Do options hona ek for university login aur dusra for samanya janta</Title>
+                <Title>
+                  Welcome to ShikshaVerse! Do options hona ek for university login aur dusra for
+                  samanya janta
+                </Title>
                 <Content>
                   <img src={logo} alt="logo" />
                   <Button variant="contained" color="secondary" onClick={handleConnect}>
-                    Open Lobby -  Yeh option kisi kaam ka nai hai hata do isko
+                    Open Lobby - Yeh option kisi kaam ka nai hai hata do isko
                   </Button>
                   <Button
-                  variant="contained"
-                  color="secondary"
-                  onClick={() => setShowCreateRoomForm(true)}
-                >
-                  Create a New College - This opetion should be available only if connected wallet has a NFT issued by govt which proves that its a univeristy
-                </Button>
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => setShowCreateRoomForm(true)}
+                  >
+                    Create a New College - This opetion should be available only if connected wallet
+                    has a NFT issued by govt which proves that its a univeristy
+                  </Button>
                   <Button
                     variant="outlined"
                     color="secondary"
@@ -194,7 +232,6 @@ export default function RoomSelectionDialog() {
                   >
                     See College List in Maharashtra
                   </Button>
-                  
                 </Content>
               </>
             )}
@@ -209,5 +246,4 @@ export default function RoomSelectionDialog() {
       </>
     )
   }
-
 }

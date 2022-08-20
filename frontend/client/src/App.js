@@ -10,7 +10,7 @@ function App() {
         <Router>
         <Navbar/>
          <ProRoutes/>
-         <Footer/>
+         
         </Router>
     </div>
     
