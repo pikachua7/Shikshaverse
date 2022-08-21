@@ -1,11 +1,9 @@
 import React from 'react'
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 function ContactPage() {
-
-
   const [index, setIndex] = useState(0)
 
   const handleSelect = (selectedIndex, e) => {
@@ -13,11 +11,7 @@ function ContactPage() {
   }
   return (
     <>
-
-
-
-
-<Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <img className="d-block w-100" src="img/carousel-1.jpg" alt="First slide" />
           <Carousel.Caption>
@@ -42,8 +36,6 @@ function ContactPage() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-
 
       <div className="container-xxl py-5">
         <div className="container">
@@ -91,66 +83,39 @@ function ContactPage() {
         </div>
       </div>
 
-
-      <div className="contaiber-lg py-5" >
-
-<div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 className="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h5 className="mb-5">Contact For Any Query</h5>
-            </div>
-
+      <div className="contaiber-lg py-5">
+        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 className="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+          <h5 className="mb-5">Contact For Any Query</h5>
+        </div>
 
         <div className="container">
-      <p>Please Submit your details so we could get in touch with you.</p>
-      <Form>
-      <Form.Group>
-          <Form.Label>Name:</Form.Label>
-          <Form.Control type="text" 
-                        placeholder="Enter your full name" />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Email address:</Form.Label>
-          <Form.Control type="email" 
-                        placeholder="Enter your email address" />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>City/Town/Village : </Form.Label>
-          <Form.Control type="number" placeholder="Enter your City/Town/Village" />
-        </Form.Group>
+          <p>Please Submit your details so we could get in touch with you.</p>
+          <Form>
+            <Form.Group>
+              <Form.Label>Name:</Form.Label>
+              <Form.Control type="text" placeholder="Enter your full name" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Email address:</Form.Label>
+              <Form.Control type="email" placeholder="Enter your email address" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>City/Town/Village : </Form.Label>
+              <Form.Control type="number" placeholder="Enter your City/Town/Village" />
+            </Form.Group>
 
+            <Form.Group>
+              <Form.Label>Queries : </Form.Label>
+              <Form.Control type="number" placeholder="Enter your Queries" />
+            </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Queries : </Form.Label>
-          <Form.Control type="number" placeholder="Enter your Queries" />
-        </Form.Group>
-        
-        <Button variant="primary" type="submit" style={{marginTop:"20px"}}>
-           Click here to submit form
-        </Button>
-      </Form>
-
+            <Button variant="primary" type="submit" style={{ marginTop: '20px' }}>
+              Click here to submit form
+            </Button>
+          </Form>
+        </div>
       </div>
-      </div>
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <div className="container-xxl py-5">
         <div className="container">

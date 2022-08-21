@@ -74,23 +74,26 @@ const MapDialog = (props) => {
           {DTName && (
             <Typography variant="h6" className={classes.title}>
               Selected District: {DTName}
-
-
               <Link to="/tour">
-                <Button style={{ backgroundColor: '#614bcc', color: 'white', float: 'right',padding:'10px' }}>
+                <Button
+                  style={{
+                    backgroundColor: '#614bcc',
+                    color: 'white',
+                    float: 'right',
+                    padding: '10px',
+                  }}
+                >
                   View Colleges in {DTName}
                 </Button>
               </Link>
-
-              
               {/*<Button style={{backgroundColor : 'blue',color :'white',float:'right'}}>View Colleges in {DTName}</Button>*/}
             </Typography>
           )}
         </Toolbar>
       </AppBar>
       <CssBaseline />
-      <div style={{ height: '2000px', backgroundColor: '#c070c2' }}>
-        <Container maxWidth="md" style={{ backgroundColor: '#c070c2' }}>
+      <div style={{ height: '2000px', background: 'linear-gradient(to bottom, #280b25, #340e30, #41123c, #4e1548, #5b1854)' }}>
+        <Container maxWidth="md" style={{ background: 'linear-gradient(to bottom, #280b25, #340e30, #41123c, #4e1548, #5b1854)' }}>
           <StateChart
             setTooltipContent={setContentD}
             setDistrictName={setDTName}
