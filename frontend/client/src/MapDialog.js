@@ -74,7 +74,7 @@ const MapDialog = (props) => {
           {DTName && (
             <Typography variant="h6" className={classes.title}>
               Selected District: {DTName}
-              <Link to="/tour">
+              <Link to="/tour" state={{city : DTName}}>
                 <Button
                   style={{
                     backgroundColor: '#614bcc',
