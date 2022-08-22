@@ -53,7 +53,7 @@ const RoomName = styled.div`
   justify-content: center;
 
   h3 {
-    font-size: 24px;
+    font-size: 16px;
     color: #eee;
   }
 `

@@ -38,7 +38,7 @@ const MapChart = ({ setTooltipContent, setStateName, setShowDistrict }) => {
                         outline: "none"
                       },
                       hover: {
-                        fill: "#4c548c",
+                        fill: "#2d3de3",
                         outline: "none"
                       },
                       pressed: {

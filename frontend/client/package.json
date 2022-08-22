@@ -38,6 +38,7 @@
     "react-simple-maps": "^1.0.0-beta.0",
     "react-tooltip": "^4.1.2",
     "sass": "^1.42.1",
+    "state-pool": "^0.7.1",
     "styled-components": "^5.3.1",
     "swiper": "^6.8.4",
     "types": "file:./../types",
