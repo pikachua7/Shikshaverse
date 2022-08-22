@@ -5,13 +5,8 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@mui/material/styles'
 
-
-
-
-
-
 import styled from 'styled-components'
-///import './index.scss'
+import './indexMain.scss'
 import { useAppSelector } from './hooks'
 
 ///import Home from './components/Home'
@@ -37,10 +32,24 @@ function Main() {
   const videoConnected = useAppSelector((state) => state.user.videoConnected)
   const roomJoined = useAppSelector((state) => state.room.roomJoined)
 
+  const location = useLocation()
+  //console.log(location)
+  const [locationState, setLocationState] = React.useState({ city: '' })
+
+  React.useEffect(() => {
+    if (location.state) {
+      let _state = location.state as any
+      setLocationState(_state)
+      console.log(_state)
+    }
+  }, [location])
 
 
-  //const location = useLocation()
-  ///const city = location.state
+
+  ///Wo hoooo......receiving city name from MAP Dailogue!!!!!
+  //console.log(locationState.city)
+
+  
   let ui: JSX.Element
   if (loggedIn) {
     if (computerDialogOpen) {
@@ -61,22 +70,20 @@ function Main() {
     }
   } else if (roomJoined) {
     /* Render LoginDialog if not logged in but selected a room. */
-      ui = <LoginDialog />
+    ui = <LoginDialog />
   } else {
     /* Render RoomSelectionDialog if yet selected a room. */
 
-
     //trying it out
-   ui = <RoomSelectionDialog />
+    ui = <RoomSelectionDialog city = {locationState.city}/>
 
-     /// ui = <Map/>
-
+    /// ui = <Map/>
   }
 
   return (
     <Backdrop>
       {ui}
-     
+
       {/* Render HelperButtonGroup if no dialogs are opened. */}
       {!computerDialogOpen && !whiteboardDialogOpen && <HelperButtonGroup />}
     </Backdrop>

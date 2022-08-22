@@ -89,7 +89,7 @@ const ProgressBar = styled(LinearProgress)`
   width: 360px;
 `
 
-export default function RoomSelectionDialog() {
+export default function RoomSelectionDialog(props:any) {
   const [showCustomRoom, setShowCustomRoom] = useState(false)
   const [stateSelected, setState] = useState(false)
 
@@ -117,7 +117,7 @@ export default function RoomSelectionDialog() {
     return (
       <>
           <div className="container-xl py-3" style={{marginTop:'20px',backgroundColor:"white",textAlign:'center'}}>
-                <h4>List Of Colleges</h4>
+                <h4>List Of Colleges in {props.city}</h4>
           </div>
         <div className="container-xl" style={{marginTop:'20px'}}>
           <table className="table">
