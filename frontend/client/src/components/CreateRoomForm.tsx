@@ -65,6 +65,7 @@ export const CreateRoomForm = () => {
         error={nameFieldEmpty}
         helperText={nameFieldEmpty && 'Name is required'}
         onChange={handleChange('name')}
+        
       />
 
       <TextField
@@ -80,7 +81,7 @@ export const CreateRoomForm = () => {
 
       <TextField
         type={showPassword ? 'text' : 'password'}
-        label="Password ke jagah Metamask wallet se NFT hai agar clg ki toh in or out(optional)"
+        label="Metamask wallet se NFT (optional)"
         onChange={handleChange('password')}
         color="secondary"
         InputProps={{

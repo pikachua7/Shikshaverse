@@ -30,7 +30,7 @@ const Backdrop = styled.div`
 `
 
 const Wrapper = styled.div`
-  background: #222639;
+  background: #ffffff;
   border-radius: 16px;
   padding: 36px 60px;
   box-shadow: 0px 0px 5px #0000006f;
@@ -57,7 +57,7 @@ const BackButtonWrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 16px;
-  color: #eee;
+  color: #000000;
   text-align: center;
 `
 
@@ -88,6 +88,18 @@ const ProgressBarWrapper = styled.div`
 const ProgressBar = styled(LinearProgress)`
   width: 360px;
 `
+
+
+////DO NOT DELETE THIS COMMENT
+/*
+ <Button
+                    variant="outlined"
+                    color="secondary"
+                    onClick={() => (lobbyJoined ? setShowCustomRoom(true) : setShowSnackbar(true))}
+                  >
+                    See College List in Maharashtra
+                  </Button>
+*/
 
 export default function RoomSelectionDialog(props:any) {
   const [showCustomRoom, setShowCustomRoom] = useState(false)
@@ -210,36 +222,31 @@ export default function RoomSelectionDialog(props:any) {
             ) : (
               <>
                 <Title>
-                  Welcome to ShikshaVerse! Do options hona ek for university login aur dusra for
-                  samanya janta
+                  Be Ready for the Virtual Tour, brought to you by शिक्षाVerse  ! 
                 </Title>
                 <Content>
-                  <img src={logo} alt="logo" />
-                  <Button variant="contained" color="secondary" onClick={handleConnect}>
-                    Open Lobby - Yeh option kisi kaam ka nai hai hata do isko
+                  <img src={logo} style={{border:"2px solid"}} alt="logo" />
+                  <Button variant="contained" color="secondary" style={{color:'white'}} onClick={handleConnect}>
+                    Join as a visitor
                   </Button>
                   <Button
                     variant="contained"
                     color="secondary"
                     onClick={() => setShowCreateRoomForm(true)}
+                    style={{color :'white'}}
                   >
-                    Create a New College - This opetion should be available only if connected wallet
-                    has a NFT issued by govt which proves that its a univeristy
+                    Join/Create as a College Admin
                   </Button>
-                  <Button
-                    variant="outlined"
-                    color="secondary"
-                    onClick={() => (lobbyJoined ? setShowCustomRoom(true) : setShowSnackbar(true))}
-                  >
-                    See College List in Maharashtra
-                  </Button>
+                  
+                  
+                 
                 </Content>
               </>
             )}
           </Wrapper>
           {!lobbyJoined && (
             <ProgressBarWrapper>
-              <h3> Connecting to server...</h3>
+              <h4> Connecting to server...</h4>
               <ProgressBar color="secondary" />
             </ProgressBarWrapper>
           )}
