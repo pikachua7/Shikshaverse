@@ -7,7 +7,8 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
+        
         <ProRoutes />
       </Router>
     </div>
