@@ -13,8 +13,8 @@ const AreaSelector = () => {
   return (
     <>
       <MapDialog show={show} StateName={STName} closeModal={handleClose} />
-      <div style={{ background:'linear-gradient(to top, #030f20, #001636, #001b4c, #001e62, #161d76)', marginTop: '50px' }}>
-        <MapChart
+      <div  style={{ background:'#83aef2', marginTop: '50px'}}>
+        <MapChart 
           setTooltipContent={setContent}
           setStateName={setSTName}
           setShowDistrict={setShow}

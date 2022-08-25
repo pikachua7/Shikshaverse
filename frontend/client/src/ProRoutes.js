@@ -17,6 +17,7 @@ import reportWebVitals from './reportWebVitals'
 import store from './stores'
 import FirstYear from './components/FirstYear';
 import Profile from './components/Profile';
+
 function ProRoutes() {
   return (
     <div>
@@ -32,6 +33,7 @@ function ProRoutes() {
                                             </Provider>}/>
                                             <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/fy" element={<FirstYear/>}/>
+       
     </Routes>
 
 

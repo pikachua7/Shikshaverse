@@ -12,7 +12,7 @@ import india from '../topojsons/india.json';
 const MapChart = ({ setTooltipContent, setStateName, setShowDistrict }) => {
     return (
       <>
-        <ComposableMap  data-tip="" projection="geoMercator" width={150} height={150} projectionConfig={{ scale: 220 }}>
+        <ComposableMap  data-tip="" projection="geoMercator" width={150} height={150} projectionConfig={{ scale: 100 }}>
           <ZoomableGroup zoom={1} center={[80,22]}>
             <Geographies geography={india}>
               {({ geographies }) =>
@@ -38,7 +38,7 @@ const MapChart = ({ setTooltipContent, setStateName, setShowDistrict }) => {
                         outline: "none"
                       },
                       hover: {
-                        fill: "#2d3de3",
+                        fill: "#5e95ed",
                         outline: "none"
                       },
                       pressed: {

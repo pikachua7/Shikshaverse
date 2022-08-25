@@ -47,7 +47,7 @@ const MapDialog = (props) => {
   return (
     //<Router>
     <Dialog
-      fullScreen
+      maxWidth='md'
       TransitionComponent={Transition}
       open={props.show}
       onClose={props.closeModal}
@@ -73,13 +73,13 @@ const MapDialog = (props) => {
           )}
           {DTName && (
             <Typography variant="h6" className={classes.title}>
-              Selected District: {DTName}
+              
               <Link to="/tour" state={{city : DTName}}>
                 <Button
                   style={{
                     backgroundColor: '#614bcc',
                     color: 'white',
-                    float: 'right',
+                    float: 'left',
                     padding: '10px',
                   }}
                 >
