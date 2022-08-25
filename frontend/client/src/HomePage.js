@@ -55,7 +55,7 @@ function HomePage() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-globe text-primary mb-4"></i>
                   <h5 className="mb-3">Access Anywhere</h5>
-                  <p>Take a virtual tour of your desired college located anywhere in India.</p>
+                  <p>Take a virtual tour of your desired college located anywhere in India.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ function HomePage() {
                 <div className="p-4">
                   <i className="fa fa-3x fa-home text-primary mb-4"></i>
                   <h5 className="mb-3">Home Comfort</h5>
-                  <p>Avoid hectic travels to experience the college atmosphere.</p>
+                  <p>Avoid hectic travels to experience the college atmosphere with save time.   </p>
                 </div>
               </div>
             </div>
