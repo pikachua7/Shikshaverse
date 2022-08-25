@@ -30,7 +30,7 @@ const Wrapper = styled.form`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #222639;
+  background: #ffffff;
   border-radius: 16px;
   padding: 36px 60px;
   box-shadow: 0px 0px 5px #0000006f;
@@ -39,7 +39,7 @@ const Wrapper = styled.form`
 const Title = styled.p`
   margin: 5px;
   font-size: 20px;
-  color: #c2c2c2;
+  color: #000000;
   text-align: center;
 `
 
@@ -54,7 +54,7 @@ const RoomName = styled.div`
 
   h3 {
     font-size: 16px;
-    color: #eee;
+    color: #000000;
   }
 `
 
@@ -64,7 +64,7 @@ const RoomDescription = styled.div`
   overflow-wrap: anywhere;
   overflow-y: auto;
   font-size: 16px;
-  color: #c2c2c2;
+  color: #000000;
   display: flex;
   justify-content: center;
 `
@@ -72,13 +72,14 @@ const RoomDescription = styled.div`
 const SubTitle = styled.h3`
   width: 160px;
   font-size: 16px;
-  color: #eee;
+  color: #000000;
   text-align: center;
 `
 
 const Content = styled.div`
   display: flex;
   margin: 36px 0;
+  color : #000000
 `
 
 const Left = styled.div`
@@ -135,7 +136,7 @@ const avatars = [
   { name: 'nancy', img: Nancy },
 ]
 
-// shuffle the avatars array
+
 for (let i = avatars.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1))
   ;[avatars[i], avatars[j]] = [avatars[j], avatars[i]]
@@ -168,16 +169,9 @@ export default function LoginDialog() {
 
   return (
     <Wrapper onSubmit={handleSubmit}>
-      <Title>Joining</Title>
-      <RoomName>
-        <Avatar style={{ background: getColorByString(roomName) }}>
-          {getAvatarString(roomName)}
-        </Avatar>
-        <h3>{roomName}</h3>
-      </RoomName>
-      <RoomDescription>
-        <ArrowRightIcon /> {roomDescription}
-      </RoomDescription>
+      <Title>Begin Your Virtual Tour </Title>
+     
+     
       <Content>
         <Left>
           <SubTitle>Select an avatar</SubTitle>
@@ -237,7 +231,7 @@ export default function LoginDialog() {
       </Content>
       <Bottom>
         <Button variant="contained" color="secondary" size="large" type="submit">
-          Join
+          Join Tour
         </Button>
       </Bottom>
     </Wrapper>

@@ -11,8 +11,8 @@ import DarkModeIcon from '@mui/icons-material/DarkMode'
 import CloseIcon from '@mui/icons-material/Close'
 import LightbulbIcon from '@mui/icons-material/Lightbulb'
 import ArrowRightIcon from '@mui/icons-material/ArrowRight'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
+import LogoutIcon from '@mui/icons-material/Logout';
+
 
 import { BackgroundMode } from '../../../types/BackgroundMode'
 import { toggleBackgroundMode } from '../stores/UserStore'
@@ -161,8 +161,24 @@ export default function HelperButtonGroup() {
             </Tooltip>
           </>
         )}
-        
-        
+
+        {roomJoined && (
+          <>
+            <Tooltip title="Leave Virtual Tour">
+              <Fab
+                variant = 'extended'
+             
+                onClick={() => 
+                  window.location.reload()
+                }
+              >
+                
+                <LogoutIcon sx={{ mr: 1}}/>
+                Leave
+              </Fab>
+            </Tooltip>
+          </>
+        )}
       </ButtonGroup>
     </Backdrop>
   )
