@@ -5,7 +5,7 @@ import AboutPage from './AboutPage';
 import ContactPage from './ContactPage'
 import Map from './Map'
 import Main from './Main';
-
+import Login from './Login';
 import 'regenerator-runtime/runtime'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -16,7 +16,7 @@ import muiTheme from './MuiTheme'
 import reportWebVitals from './reportWebVitals'
 import store from './stores'
 
-
+import Profile from './Profile';
 function ProRoutes() {
   return (
     <div>
@@ -30,6 +30,7 @@ function ProRoutes() {
                                             <Main/>
                                             </ThemeProvider>
                                             </Provider>}/>
+                                            <Route exact path="/login" element={<Login/>}/>
     </Routes>
 
 

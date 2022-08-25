@@ -22,7 +22,7 @@ function Navbar() {
                 <Link to="/" className="nav-item nav-link active" style={{color:"white"}}>Home</Link>
                 <Link to="/about" className="nav-item nav-link active" style={{color:"white"}}>About Us</Link>
                 <Link to="/contact" className="nav-item nav-link active "  style={{color:"white"}}>Contact</Link>
-                <Link to="/map" className="nav-item nav-link active" style={{color:'yellow'}}>Start Tour</Link>
+                <Link to="/login" className="nav-item nav-link active" style={{color:'yellow'}}>College Login</Link>
 
             </div>
 

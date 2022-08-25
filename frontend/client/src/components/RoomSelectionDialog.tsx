@@ -17,6 +17,8 @@ import { useAppSelector } from '../hooks'
 import phaserGame from '../PhaserGame'
 import Bootstrap from '../scenes/Bootstrap'
 import Footer from '../Footer'
+import { Link } from 'react-router-dom'
+import Profile from '../Profile'
 
 const Backdrop = styled.div`
   position: absolute;
@@ -89,7 +91,6 @@ const ProgressBar = styled(LinearProgress)`
   width: 360px;
 `
 
-
 ////DO NOT DELETE THIS COMMENT
 /*
  <Button
@@ -101,7 +102,7 @@ const ProgressBar = styled(LinearProgress)`
                   </Button>
 */
 
-export default function RoomSelectionDialog(props:any) {
+export default function RoomSelectionDialog(props: any) {
   const [showCustomRoom, setShowCustomRoom] = useState(false)
   const [stateSelected, setState] = useState(false)
 
@@ -128,43 +129,54 @@ export default function RoomSelectionDialog(props:any) {
   if (!stateSelected) {
     return (
       <>
-          <div className="container-xl py-3" style={{marginTop:'20px',backgroundColor:"white",textAlign:'center'}}>
-                <h4>List Of Colleges in {props.city}</h4>
-          </div>
-        <div className="container-xl" style={{marginTop:'20px'}}>
+        <div
+          className="container-xl py-3"
+          style={{ marginTop: '20px', backgroundColor: 'white', textAlign: 'center' }}
+        >
+          <h4>List Of Colleges in {props.city}</h4>
+        </div>
+        <div className="container-xl" style={{ marginTop: '20px' }}>
           <table className="table">
             <thead className="thead-dark">
               <tr>
                 <th scope="col">Sr.No</th>
                 <th scope="col">Name</th>
                 <th scope="col">Virtual Tour Link</th>
-                
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
                 <td>Indian Intstitute Of Technology Bombay</td>
-                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
-                
+                <td>
+                  <button onClick={handleStateSelection} className="button btn-primary">
+                    Visit College
+                  </button>
+                </td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>VJTI</td>
-                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
-                
+                <td>
+                  <button onClick={handleStateSelection} className="button btn-primary">
+                    Visit College
+                  </button>
+                </td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>D.Y Patil College of Engineering.</td>
-                <td><button onClick={handleStateSelection} className="button btn-primary">Visit College</button></td>
-               
+                <td>
+                  <button onClick={handleStateSelection} className="button btn-primary">
+                    Visit College
+                  </button>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <Footer/>
+        <Footer />
       </>
     )
   } else {
@@ -220,8 +232,27 @@ export default function RoomSelectionDialog(props:any) {
                 <CustomRoomTable />
               </CustomRoomWrapper>
             ) : (
-              <>
-                <Title>
+              <div className = "conatiner-xxl py-5">
+                
+              </div>
+            )}
+          </Wrapper>
+          {!lobbyJoined && (
+            <ProgressBarWrapper>
+              <h4> Connecting to server...</h4>
+              <ProgressBar color="secondary" />
+            </ProgressBarWrapper>
+          )}
+        </Backdrop>
+      </>
+    )
+  }
+}
+
+
+
+
+/*<Title>
                   Be Ready for the Virtual Tour, brought to you by शिक्षाVerse  ! 
                 </Title>
                 <Content>
@@ -240,18 +271,4 @@ export default function RoomSelectionDialog(props:any) {
                   
                   
                  
-                </Content>
-              </>
-            )}
-          </Wrapper>
-          {!lobbyJoined && (
-            <ProgressBarWrapper>
-              <h4> Connecting to server...</h4>
-              <ProgressBar color="secondary" />
-            </ProgressBarWrapper>
-          )}
-        </Backdrop>
-      </>
-    )
-  }
-}
+                </Content>*/
