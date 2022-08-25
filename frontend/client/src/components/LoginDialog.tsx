@@ -170,9 +170,8 @@ export default function LoginDialog() {
     <Wrapper onSubmit={handleSubmit}>
       <Title>Join Virtual Tour</Title>
       
-      <RoomDescription>
-        <ArrowRightIcon /> {roomDescription}
-      </RoomDescription>
+    
+       
       <Content>
         <Left>
           <SubTitle>Select an avatar</SubTitle>
