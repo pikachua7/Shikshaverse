@@ -168,13 +168,8 @@ export default function LoginDialog() {
 
   return (
     <Wrapper onSubmit={handleSubmit}>
-      <Title>Joining</Title>
-      <RoomName>
-        <Avatar style={{ background: getColorByString(roomName) }}>
-          {getAvatarString(roomName)}
-        </Avatar>
-        <h3>{roomName}</h3>
-      </RoomName>
+      <Title>Join Virtual Tour</Title>
+      
       <RoomDescription>
         <ArrowRightIcon /> {roomDescription}
       </RoomDescription>
@@ -237,7 +232,7 @@ export default function LoginDialog() {
       </Content>
       <Bottom>
         <Button variant="contained" color="secondary" size="large" type="submit">
-          Join
+          Join Tour
         </Button>
       </Bottom>
     </Wrapper>
