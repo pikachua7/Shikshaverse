@@ -37,8 +37,8 @@ const Backdrop = styled.div`
 const Wrapper = styled.div`
   position: relative;
   font-size: 16px;
-  color: #eee;
-  background: #222639;
+  color: #000000;
+  background: #ffffff;
   box-shadow: 0px 0px 5px #0000006f;
   border-radius: 16px;
   padding: 15px 35px 15px 15px;
@@ -64,7 +64,7 @@ const ButtonGroup = styled.div`
 
 const Title = styled.h3`
   font-size: 24px;
-  color: #eee;
+  color: #000000;
   text-align: center;
 `
 
@@ -115,32 +115,9 @@ export default function HelperButtonGroup() {
   return (
     <Backdrop>
       <div className="wrapper-group">
-        {showRoomInfo && (
-          <Wrapper>
-            <IconButton className="close" onClick={() => setShowRoomInfo(false)} size="small">
-              <CloseIcon />
-            </IconButton>
-            <RoomName>
-              <Avatar style={{ background: getColorByString(roomName) }}>
-                {getAvatarString(roomName)}
-              </Avatar>
-              <h3>{roomName}</h3>
-            </RoomName>
-            <RoomDescription>
-              <ArrowRightIcon /> ID: {roomId}
-            </RoomDescription>
-            <RoomDescription>
-              <ArrowRightIcon /> Description: {roomDescription}
-            </RoomDescription>
-            <p className="tip">
-              <LightbulbIcon />
-              Shareable link coming up 😄
-            </p>
-          </Wrapper>
-        )}
         {showControlGuide && (
           <Wrapper>
-            <Title>Controls</Title>
+            <Title>Virtual Tour Controls</Title>
             <IconButton className="close" onClick={() => setShowControlGuide(false)} size="small">
               <CloseIcon />
             </IconButton>
@@ -171,17 +148,6 @@ export default function HelperButtonGroup() {
       <ButtonGroup>
         {roomJoined && (
           <>
-            <Tooltip title="Room Info">
-              <StyledFab
-                size="small"
-                onClick={() => {
-                  setShowRoomInfo(!showRoomInfo)
-                  setShowControlGuide(false)
-                }}
-              >
-                <ShareIcon />
-              </StyledFab>
-            </Tooltip>
             <Tooltip title="Control Guide">
               <StyledFab
                 size="small"
@@ -195,25 +161,8 @@ export default function HelperButtonGroup() {
             </Tooltip>
           </>
         )}
-        <Tooltip title="Visit Our GitHub">
-          <StyledFab
-            size="small"
-            href="https://github.com/kevinshen56714/SkyOffice"
-            target="_blank"
-          >
-            <GitHubIcon />
-          </StyledFab>
-        </Tooltip>
-        <Tooltip title="Follow Us on Twitter">
-          <StyledFab size="small" href="https://twitter.com/SkyOfficeApp" target="_blank">
-            <TwitterIcon />
-          </StyledFab>
-        </Tooltip>
-        <Tooltip title="Switch Background Theme">
-          <StyledFab size="small" onClick={() => dispatch(toggleBackgroundMode())}>
-            {backgroundMode === BackgroundMode.DAY ? <DarkModeIcon /> : <LightModeIcon />}
-          </StyledFab>
-        </Tooltip>
+        
+        
       </ButtonGroup>
     </Backdrop>
   )
