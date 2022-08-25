@@ -43,8 +43,9 @@ const FabWrapper = styled.div`
 const ChatHeader = styled.div`
   position: relative;
   height: 35px;
-  background: #000000a7;
+  background: #ffffffa7;
   border-radius: 10px 10px 0px 0px;
+  border: 1px solid;
 
   h3 {
     color: #fff;
@@ -64,8 +65,8 @@ const ChatBox = styled(Box)`
   height: 100%;
   width: 100%;
   overflow: auto;
-  background: #2c2c2c;
-  border: 1px solid #00000029;
+  background: #ffffff;
+  border: 1px solid;
 `
 
 const MessageWrapper = styled.div`
@@ -93,22 +94,24 @@ const MessageWrapper = styled.div`
   }
 
   :hover {
-    background: #3a3a3a;
+    background: #ffffe6;
   }
 `
 
 const InputWrapper = styled.form`
   box-shadow: 10px 10px 10px #00000018;
-  border: 1px solid #42eacb;
+  border: 1px solid ;
   border-radius: 0px 0px 10px 10px;
   display: flex;
   flex-direction: row;
-  background: linear-gradient(180deg, #000000c1, #242424c0);
+  background: #ffffff;
 `
 
 const InputTextField = styled(InputBase)`
+  
   border-radius: 0px 0px 10px 10px;
   input {
+    
     padding: 5px;
   }
 `
@@ -177,7 +180,7 @@ export default function Chat() {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Escape') {
-      // move focus back to the game
+     
       inputRef.current?.blur()
       dispatch(setShowChat(false))
     }
@@ -185,7 +188,7 @@ export default function Chat() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    // move focus back to the game
+    
     inputRef.current?.blur()
 
     const val = inputValue.trim()
@@ -216,14 +219,14 @@ export default function Chat() {
         {showChat ? (
           <>
             <ChatHeader>
-              <h3>Chat</h3>
+              <h3 style={{color:'black'}}>Chat</h3>
               <IconButton
                 aria-label="close dialog"
                 className="close"
                 onClick={() => dispatch(setShowChat(false))}
                 size="small"
               >
-                <CloseIcon />
+                <CloseIcon style={{color:'black'}}/>
               </IconButton>
             </ChatHeader>
             <ChatBox>
@@ -259,10 +262,11 @@ export default function Chat() {
                 onFocus={() => {
                   if (!focused) dispatch(setFocused(true))
                 }}
+                style={{color:'black'}}
                 onBlur={() => dispatch(setFocused(false))}
               />
               <IconButton aria-label="emoji" onClick={() => setShowEmojiPicker(!showEmojiPicker)}>
-                <InsertEmoticonIcon />
+                <InsertEmoticonIcon style={{color:"black"}}/>
               </IconButton>
             </InputWrapper>
           </>
