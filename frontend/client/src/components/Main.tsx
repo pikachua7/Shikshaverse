@@ -6,18 +6,18 @@ import { Provider } from 'react-redux'
 import { ThemeProvider } from '@mui/material/styles'
 
 import styled from 'styled-components'
-import './indexMain.scss'
+import '../indexMain.scss'
 import { useAppSelector } from './hooks'
 
 ///import Home from './components/Home'
 
-import RoomSelectionDialog from './components/RoomSelectionDialog'
-import LoginDialog from './components/LoginDialog'
-import ComputerDialog from './components/ComputerDialog'
-import WhiteboardDialog from './components/WhiteboardDialog'
-import VideoConnectionDialog from './components/VideoConnectionDialog'
-import Chat from './components/Chat'
-import HelperButtonGroup from './components/HelperButtonGroup'
+import RoomSelectionDialog from './RoomSelectionDialog'
+import LoginDialog from './LoginDialog'
+import ComputerDialog from './ComputerDialog'
+import WhiteboardDialog from './WhiteboardDialog'
+import VideoConnectionDialog from './VideoConnectionDialog'
+import Chat from './Chat'
+import HelperButtonGroup from './HelperButtonGroup'
 
 const Backdrop = styled.div`
   position: absolute;

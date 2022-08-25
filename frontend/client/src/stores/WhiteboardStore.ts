@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from '../components/PhaserGame'
 import Game from '../scenes/Game'
 
 interface WhiteboardState {

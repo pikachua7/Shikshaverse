@@ -11,11 +11,11 @@ import CloseIcon from '@mui/icons-material/Close'
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from './PhaserGame'
 import Game from '../scenes/Game'
 
 import { getColorByString } from '../util'
-import { useAppDispatch, useAppSelector } from '../hooks'
+import { useAppDispatch, useAppSelector } from './hooks'
 import { MessageType, setFocused, setShowChat } from '../stores/ChatStore'
 
 const Backdrop = styled.div`

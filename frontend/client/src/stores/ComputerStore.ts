@@ -1,7 +1,7 @@
 import Peer from 'peerjs'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import ShareScreenManager from '../web/ShareScreenManager'
-import phaserGame from '../PhaserGame'
+import phaserGame from '../components/PhaserGame'
 import Game from '../scenes/Game'
 import { sanitizeId } from '../util'
 

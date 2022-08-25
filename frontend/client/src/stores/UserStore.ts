@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { sanitizeId } from '../util'
 import { BackgroundMode } from '../../../types/BackgroundMode'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from '../components/PhaserGame'
 import Bootstrap from '../scenes/Bootstrap'
 
 export function getInitialBackgroundMode() {

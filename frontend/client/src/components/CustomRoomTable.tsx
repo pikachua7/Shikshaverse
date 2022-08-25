@@ -17,10 +17,10 @@ import Alert from '@mui/material/Alert'
 import Avatar from '@mui/material/Avatar'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import LockIcon from '@mui/icons-material/Lock'
-import { useAppSelector } from '../hooks'
+import { useAppSelector } from './hooks'
 import { getAvatarString, getColorByString } from '../util'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from './PhaserGame'
 import Bootstrap from '../scenes/Bootstrap'
 
 const MessageText = styled.p`

@@ -16,11 +16,11 @@ import Adam from '../assets/Adam_login.png'
 import Ash from '../assets/Ash_login.png'
 import Lucy from '../assets/Lucy_login.png'
 import Nancy from '../assets/Nancy_login.png'
-import { useAppSelector, useAppDispatch } from '../hooks'
+import { useAppSelector, useAppDispatch } from './hooks'
 import { setLoggedIn } from '../stores/UserStore'
 import { getAvatarString, getColorByString } from '../util'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from './PhaserGame'
 import Game from '../scenes/Game'
 
 SwiperCore.use([Navigation])

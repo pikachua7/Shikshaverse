@@ -12,13 +12,13 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 import { CustomRoomTable } from './CustomRoomTable'
 import { CreateRoomForm } from './CreateRoomForm'
-import { useAppSelector } from '../hooks'
+import { useAppSelector } from './hooks'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from './PhaserGame'
 import Bootstrap from '../scenes/Bootstrap'
-import Footer from '../Footer'
+import Footer from './Footer'
 import { Link } from 'react-router-dom'
-import Profile from '../Profile'
+import Profile from './Profile'
 
 const Backdrop = styled.div`
   position: absolute;
@@ -105,6 +105,7 @@ const ProgressBar = styled(LinearProgress)`
 export default function RoomSelectionDialog(props: any) {
   const [showCustomRoom, setShowCustomRoom] = useState(false)
   const [stateSelected, setState] = useState(false)
+  const [showProfile, setShowProfile] = useState(false)
 
   const [showCreateRoomForm, setShowCreateRoomForm] = useState(false)
   const [showSnackbar, setShowSnackbar] = useState(false)
@@ -125,6 +126,13 @@ export default function RoomSelectionDialog(props: any) {
   const handleStateSelection = () => {
     setState(true)
   }
+
+
+  const handleProfileShow = () => {
+    setShowProfile(true)
+  }
+
+
 
   if (!stateSelected) {
     return (
@@ -199,6 +207,10 @@ export default function RoomSelectionDialog(props: any) {
             Trying to connect to server, please try again!
           </Alert>
         </Snackbar>
+
+
+
+
         <Backdrop>
           <Wrapper>
             {showCreateRoomForm ? (
@@ -211,29 +223,99 @@ export default function RoomSelectionDialog(props: any) {
                 </BackButtonWrapper>
                 <CreateRoomForm />
               </CustomRoomWrapper>
-            ) : showCustomRoom ? (
-              <CustomRoomWrapper>
-                <Title>
-                  Colleges of Maharashtra
-                  <Tooltip
-                    title="We update the results in realtime, no refresh needed!"
-                    placement="top"
-                  >
-                    <IconButton>
-                      <HelpOutlineIcon className="tip" />
-                    </IconButton>
-                  </Tooltip>
+            ) : showProfile ? (
+              <>
+
+
+
+
+  
+              <Title>
+                  Be Ready for the Virtual Tour, brought to you by शिक्षाVerse  ! 
                 </Title>
-                <BackButtonWrapper>
-                  <IconButton onClick={() => setShowCustomRoom(false)}>
-                    <ArrowBackIcon />
-                  </IconButton>
-                </BackButtonWrapper>
-                <CustomRoomTable />
-              </CustomRoomWrapper>
+                <Content>
+                  <img src={logo} style={{border:"2px solid"}} alt="logo" />
+                  <Button variant="contained" color="secondary" style={{color:'white'}} onClick={handleConnect}>
+                    Join as a visitor
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => setShowCreateRoomForm(true)}
+                    style={{color :'white'}}
+                  >
+                    Join/Create as a College Admin
+                  </Button>
+                  
+                  
+                 
+                </Content>
+             
+</>
             ) : (
-              <div className = "conatiner-xxl py-5">
-                
+              <div className="container-xxl py-5 " style={{ marginTop: '100px' }}>
+                <div className="container-xxl py-5 ">
+                  <h4 style={{ color: 'blue' }}>Indian Institute of Technology Bombay</h4>
+                  <p>Departments</p>
+                  <button onClick={handleProfileShow} className="button btn-primary">
+                    Visit College
+                  </button>
+                  <img src="img/depts.png" useMap="#iitb" style={{}}></img>
+
+                  <map name="iitb">
+                   <Link to='/fy'>
+                   <area
+                      shape="circle"
+                      coords="109,121,75"
+                      href=""
+                      alt="First Year Building"
+                    />
+                   </Link> 
+                    <area
+                      shape="circle"
+                      coords="303,130,75"
+                      href=""
+                      alt="Computer Science and Engineering Building"
+                    />
+                    <area
+                      shape="circle"
+                      coords="491,140,75"
+                      href=""
+                      alt="Mechanical Engineering Building"
+                    />
+                    <area
+                      shape="circle"
+                      coords="105,298,75"
+                      href=""
+                      alt="Physical Education Building"
+                    />
+                    <area
+                      shape="circle"
+                      coords="312,302,75"
+                      href=""
+                      alt="Bio-medical Engineering Building"
+                    />
+                    <area
+                      shape="circle"
+                      coords="490,296,75"
+                      href=""
+                      alt="Civil Engineering Building"
+                    />
+                    <area
+                      shape="circle"
+                      coords="120,457,75"
+                      href=""
+                      alt="Electronics Engineering Building"
+                    />
+                    <area shape="circle" coords="303,459,75" href="" alt="Hostel Building" />
+                    <area
+                      shape="circle"
+                      coords="492,468,75"
+                      href=""
+                      alt="Industrial Engineering Building"
+                    />
+                  </map>
+                </div>
               </div>
             )}
           </Wrapper>
@@ -248,9 +330,6 @@ export default function RoomSelectionDialog(props: any) {
     )
   }
 }
-
-
-
 
 /*<Title>
                   Be Ready for the Virtual Tour, brought to you by शिक्षाVerse  ! 

@@ -1,7 +1,7 @@
 import Peer from 'peerjs'
 import store from '../stores'
 import { setMyStream, addVideoStream, removeVideoStream } from '../stores/ComputerStore'
-import phaserGame from '../PhaserGame'
+import phaserGame from '../components/PhaserGame'
 import Game from '../scenes/Game'
 
 export default class ShareScreenManager {
