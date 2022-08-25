@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 
-import { useAppSelector, useAppDispatch } from '../hooks'
+import { useAppSelector, useAppDispatch } from './hooks'
 import { closeWhiteboardDialog } from '../stores/WhiteboardStore'
 
 const Backdrop = styled.div`

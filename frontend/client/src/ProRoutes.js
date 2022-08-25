@@ -1,22 +1,22 @@
 import React from 'react'
 import {Route,Routes} from "react-router-dom";
-import HomePage from './HomePage'
-import AboutPage from './AboutPage';
-import ContactPage from './ContactPage'
-import Map from './Map'
-import Main from './Main';
-
+import HomePage from './components/HomePage'
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage'
+import Map from './components/Map'
+import Main from './components/Main';
+import Login from './components/Login';
 import 'regenerator-runtime/runtime'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@mui/material/styles'
 ////import './index.scss'
-import './PhaserGame'
-import muiTheme from './MuiTheme'
+import './components/PhaserGame'
+import muiTheme from './components/MuiTheme'
 import reportWebVitals from './reportWebVitals'
 import store from './stores'
-
-
+import FirstYear from './components/FirstYear';
+import Profile from './components/Profile';
 function ProRoutes() {
   return (
     <div>
@@ -30,6 +30,8 @@ function ProRoutes() {
                                             <Main/>
                                             </ThemeProvider>
                                             </Provider>}/>
+                                            <Route exact path="/login" element={<Login/>}/>
+        <Route exact path="/fy" element={<FirstYear/>}/>
     </Routes>
 
 

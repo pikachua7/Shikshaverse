@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IChatMessage } from '../../../types/IOfficeState'
-import phaserGame from '../PhaserGame'
+import phaserGame from '../components/PhaserGame'
 import Game from '../scenes/Game'
 
 export enum MessageType {
@@ -29,7 +29,7 @@ export const chatSlice = createSlice({
         chatMessage: {
           createdAt: new Date().getTime(),
           author: action.payload,
-          content: 'joined the lobby',
+          content: 'joined the Virtual Tour',
         } as IChatMessage,
       })
     },
@@ -39,7 +39,7 @@ export const chatSlice = createSlice({
         chatMessage: {
           createdAt: new Date().getTime(),
           author: action.payload,
-          content: 'left the lobby',
+          content: 'left the Virtual Tour',
         } as IChatMessage,
       })
     },

@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
 
-import phaserGame from '../PhaserGame'
+import phaserGame from '../components/PhaserGame'
 import Game from '../scenes/Game'
 
 const Backdrop = styled.div`

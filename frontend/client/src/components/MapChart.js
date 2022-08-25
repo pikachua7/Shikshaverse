@@ -6,7 +6,7 @@ import {
   ZoomableGroup
 } from "react-simple-maps";
 
-import india from './topojsons/india.json';
+import india from '../topojsons/india.json';
 
 
 const MapChart = ({ setTooltipContent, setStateName, setShowDistrict }) => {
