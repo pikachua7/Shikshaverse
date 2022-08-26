@@ -1,25 +1,27 @@
 export const Navigation = (props) => {
   return (
-    <nav id='menu' className=' navbar-default navbar-fixed-top' style={{backgroundColor:"white"}}>
-      <div className='container'style={{ display: 'block'}}>
-        <div className='navbar-header'>
-          <button
-            type='button'
-            className='navbar-toggle collapsed'
-            data-toggle='collapse'
-            data-target='#bs-example-navbar-collapse-1'
-          >
-            {' '}
-            <span className='sr-only'>Toggle navigation</span>{' '}
-            <span className='icon-bar'></span>{' '}
-            <span className='icon-bar'></span>{' '}
-            <span className='icon-bar'></span>{' '}
-          </button>
-          <a className='navbar-brand page-scroll' href='#page-top'>
-            शिक्षाVerse
-          </a>{' '}
+    <nav id='menu' className=' navbar-default navbar-fixed-top' style={{ backgroundColor: "white",verticalAlign:'middle'}}>
+      <a className="navbar-brand" href="/">
+        <div className="logo-image" style={{
+          width: '60px',
+          height: '60px',
+          borderRadius: '2px',
+          overflow: 'hidden',
+          border: '1px solid',
+          marginLeft: '30px'
+        }}>
+          <img src="img/logo.png" class="img-fluid" />
+
         </div>
-      </div>
+      </a>
+
+
+
+
+      <a className='navbar-brand page-scroll' href='/'>
+        शिक्षाVerse
+      </a>{' '}
+
     </nav>
   )
 }
