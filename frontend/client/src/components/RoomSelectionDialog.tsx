@@ -138,12 +138,12 @@ export default function RoomSelectionDialog(props: any) {
     return (
       <>
         <div
-          className="container-xl py-3"
-          style={{ marginTop: '20px', backgroundColor: 'white', textAlign: 'center' }}
+          className="container-xl py-3 " 
+          style={{ marginTop: '150px', backgroundColor: 'white', textAlign: 'center' }}
         >
-          <h4>List Of Colleges in {props.city}</h4>
+          <h2>List Of Colleges in {props.city}</h2>
         </div>
-        <div className="container-xl" style={{ marginTop: '20px' }}>
+        <div className="container-xl" style={{ marginTop: '20px',fontSize:'16px' }}>
           <table className="table">
             <thead className="thead-dark">
               <tr>
@@ -157,7 +157,7 @@ export default function RoomSelectionDialog(props: any) {
                 <th scope="row">1</th>
                 <td>Indian Intstitute Of Technology Bombay</td>
                 <td>
-                  <button onClick={handleStateSelection} className="button btn-primary">
+                  <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
                     Visit College
                   </button>
                 </td>
@@ -166,7 +166,7 @@ export default function RoomSelectionDialog(props: any) {
                 <th scope="row">2</th>
                 <td>VJTI</td>
                 <td>
-                  <button onClick={handleStateSelection} className="button btn-primary">
+                  <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
                     Visit College
                   </button>
                 </td>
@@ -175,7 +175,7 @@ export default function RoomSelectionDialog(props: any) {
                 <th scope="row">3</th>
                 <td>D.Y Patil College of Engineering.</td>
                 <td>
-                  <button onClick={handleStateSelection} className="button btn-primary">
+                  <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
                     Visit College
                   </button>
                 </td>
@@ -229,35 +229,30 @@ export default function RoomSelectionDialog(props: any) {
 
 
 
-  
-              <Title>
+                <div style={{fontSize:'16px'}}>
+                <Title>
                   Be Ready for the Virtual Tour, brought to you by शिक्षाVerse  ! 
                 </Title>
                 <Content>
                   <img src={logo} style={{border:"2px solid"}} alt="logo" />
-                  <Button variant="contained" color="secondary" style={{color:'white'}} onClick={handleConnect}>
-                    Join as a visitor
+                  <Button variant="contained" color="secondary" style={{color:'white',fontSize:'16px'}} onClick={handleConnect}>
+                    Join Visitor Tour
                   </Button>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={() => setShowCreateRoomForm(true)}
-                    style={{color :'white'}}
-                  >
-                    Join/Create as a College Admin
-                  </Button>
+                 
                   
                   
                  
                 </Content>
+                </div>
+              
              
 </>
             ) : (
-              <div className="container-xxl py-5 " style={{ marginTop: '100px' }}>
-                <div className="container-xxl py-5 ">
-                  <h4 style={{ color: 'blue' }}>Indian Institute of Technology Bombay</h4>
+              <div className="container-xxl" style={{ marginTop: '300px',fontSize:'16px' }}>
+                
+                  <h2 style={{ color: 'blue' }}>Indian Institute of Technology Bombay</h2>
                   <p>Departments</p>
-                  <button onClick={handleProfileShow} className="button btn-primary">
+                  <button onClick={handleProfileShow} className="button btn-primary" style={{width:'120px',height:'50px',float:'right'}}>
                     Visit College
                   </button>
                   <img src="img/depts.png" useMap="#iitb" style={{}}></img>
@@ -316,7 +311,7 @@ export default function RoomSelectionDialog(props: any) {
                     />
                   </map>
                 </div>
-              </div>
+             
             )}
           </Wrapper>
           {!lobbyJoined && (
