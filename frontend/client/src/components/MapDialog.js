@@ -42,10 +42,7 @@ const MapDialog = (props) => {
   const [contentD, setContentD] = useState('')
   const [DTName, setDTName] = useState('')
 
-  /// let screen = <div></div>
-
   return (
-    //<Router>
     <Dialog
       maxWidth='md'
       TransitionComponent={Transition}
@@ -54,18 +51,8 @@ const MapDialog = (props) => {
       style={{ backgroundColor: 'black !important' }}
     >
       <AppBar className={classes.appBar}>
-        <Toolbar style={{ background: '#ffffff', color: '#000000' }}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            onClick={() => {
-              props.closeModal()
-              setDTName('')
-            }}
-            aria-label="close"
-          >
-            <CloseIcon />
-          </IconButton>
+        <Toolbar style={{ background: '#ffffff', color: '#000000'}}>
+       
           {!DTName && (
             <Typography variant="h6" className={classes.title}>
               Select a District From {props.StateName}
@@ -92,7 +79,7 @@ const MapDialog = (props) => {
         </Toolbar>
       </AppBar>
       <CssBaseline />
-      <div style={{ height: '2000px', background: 'linear-gradient(to bottom, #280b25, #340e30, #41123c, #4e1548, #5b1854)' }}>
+      <div style={{ background: 'linear-gradient(to bottom, #280b25, #340e30, #41123c, #4e1548, #5b1854)' }}>
         <Container maxWidth="md" style={{ background: 'linear-gradient(to bottom, #280b25, #340e30, #41123c, #4e1548, #5b1854)' }}>
           <StateChart
             setTooltipContent={setContentD}

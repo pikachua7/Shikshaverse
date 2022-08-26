@@ -7,7 +7,7 @@ import Network from '../services/Network'
 import Chair from '../items/Chair'
 import Computer from '../items/Computer'
 import Whiteboard from '../items/Whiteboard'
-
+import LoginDialog from '../components/LoginDialog'
 import Dialog from '@material-ui/core/Dialog'
 
 import { phaserEvents, Event } from '../events/EventCenter'
@@ -15,7 +15,11 @@ import store from '../stores'
 import { pushPlayerJoinedMessage } from '../stores/ChatStore'
 import { ItemType } from '../../../types/Items'
 
+
+
+
 export default class MyPlayer extends Player {
+
   private playContainerBody: Phaser.Physics.Arcade.Body
   private chairOnSit?: Chair
   constructor(
@@ -65,11 +69,10 @@ export default class MyPlayer extends Player {
           break
         case ItemType.VENDINGMACHINE:
           // hacky and hard-coded, but leaving it as is for now
-          // window.open('https://www.google.com/maps/@28.545409,77.1929044,3a,75y,283.67h,90t/data=!3m7!1e1!3m5!1sPhQVDsPsI3WnljIzP9uRrg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DPhQVDsPsI3WnljIzP9uRrg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D285.47598%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656', '_blank')
+          window.open('https://www.google.com/maps/@28.545409,77.1929044,3a,75y,283.67h,90t/data=!3m7!1e1!3m5!1sPhQVDsPsI3WnljIzP9uRrg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DPhQVDsPsI3WnljIzP9uRrg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D285.47598%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656', '_self')
           // window.open('https://ayushete02.github.io/Shikshaverse_terrace/terrace/top.html', '_blank')
-          window.open("https://www.google.com/maps/@28.545409,77.1929044,3a,75y,270.37h,90t/data=!3m7!1e1!3m5!1sPhQVDsPsI3WnljIzP9uRrg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DPhQVDsPsI3WnljIzP9uRrg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D270.4266%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656", '_blank');
-          
-          
+          //window.open("https://www.google.com/maps/@28.545409,77.1929044,3a,75y,270.37h,90t/data=!3m7!1e1!3m5!1sPhQVDsPsI3WnljIzP9uRrg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DPhQVDsPsI3WnljIzP9uRrg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D270.4266%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656",'_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+        
           break
       }
     }

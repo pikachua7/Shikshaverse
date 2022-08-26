@@ -42,6 +42,8 @@ export const whiteboardSlice = createSlice({
         action.payload.whiteboardId,
         `https://www.tldraw.com/r/sky-office-${action.payload.roomId}`
       )
+
+     
     },
   },
 })

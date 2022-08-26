@@ -13,7 +13,8 @@ const MapChart = ({ setTooltipContent, setStateName, setShowDistrict }) => {
     return (
       <>
         <ComposableMap  data-tip="" projection="geoMercator" width={150} height={150} projectionConfig={{ scale: 100 }}>
-          <ZoomableGroup zoom={1} center={[80,22]}>
+          
+          <ZoomableGroup zoom={1} center={[80,12]}>
             <Geographies geography={india}>
               {({ geographies }) =>
                 geographies.map(geo => (

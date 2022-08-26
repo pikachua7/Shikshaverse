@@ -11,23 +11,11 @@ const Map = () => {
   return (
     <>
 
-    <div className="container-xxl py-3" style={{backgroundColor:"white",marginTop:"50px"}}>
-          <h4>
-            Select a State from Map Below
-          </h4>
-          <p>Just Hover Over different States and to make a selection, simply Click. </p>
-    </div>
-      <div className="container-xxl">
+    
+      <div className="container">
 
       <AreaSelector />
-      </div>
-
-      <Footer/>
-
-
-      
-          
-      
+      </div>      
     </>
   );
 }
