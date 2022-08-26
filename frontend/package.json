@@ -1,24 +1,13 @@
 {
-  "name": "skyoffice",
+  "name": "shikshaverse",
   "version": "1.0.0",
-  "description": "Server for SkyOffice",
+  "description": "Server for Shikshaverse",
   "main": ".eslintrc.js",
   "scripts": {
     "start": "cd server && ts-node-dev --project tsconfig.server.json --respawn --transpile-only index.ts",
     "heroku-postbuild": "npm i && cd types && npm i && cd ../server && tsc --project tsconfig.server.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kevinshen56714/SkyOffice.git"
-  },
-  "keywords": [],
-  "author": "kevinshen56714",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kevinshen56714/SkyOffice/issues"
-  },
-  "homepage": "https://github.com/kevinshen56714/SkyOffice#readme",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.6",
