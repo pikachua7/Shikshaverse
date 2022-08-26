@@ -155,7 +155,7 @@ export default function RoomSelectionDialog(props: any) {
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Indian Intstitute Of Technology Bombay</td>
+                <td>Indian Intstitute Of Technology Bombay.</td>
                 <td>
                   <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
                     Visit College
@@ -164,7 +164,7 @@ export default function RoomSelectionDialog(props: any) {
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>VJTI</td>
+                <td>Veermata Jijabai Technological Institute.</td>
                 <td>
                   <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
                     Visit College
