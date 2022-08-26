@@ -134,8 +134,11 @@ export default function RoomSelectionDialog(props: any) {
 
 
 
-  if (!stateSelected) {
+  if (!stateSelected && props.city=='Mumbai') {
     return (
+
+
+      
       <>
         <div
           className="container-xl py-3 " 
@@ -152,7 +155,10 @@ export default function RoomSelectionDialog(props: any) {
                 <th scope="col">Virtual Tour Link</th>
               </tr>
             </thead>
+            
             <tbody>
+              <br />
+
               <tr>
                 <th scope="row">1</th>
                 <td>Indian Intstitute Of Technology Bombay.</td>
@@ -162,24 +168,8 @@ export default function RoomSelectionDialog(props: any) {
                   </button>
                 </td>
               </tr>
-              <tr >
-                <th style={{margin:"20px"}} scope="row">2</th>
-                <td>Veermata Jijabai Technological Institute.</td>
-                <td>
-                  <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
-                    Visit College
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>D.Y Patil College of Engineering.</td>
-                <td>
-                  <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
-                    Visit College
-                  </button>
-                </td>
-              </tr>
+              <br />
+             
             </tbody>
           </table>
         </div>
@@ -187,7 +177,23 @@ export default function RoomSelectionDialog(props: any) {
         <Footer />
       </>
     )
-  } else {
+  
+  }
+  else if(!stateSelected){
+    return(
+      
+      <>
+        <div
+          className="container-xl py-3 " 
+          style={{ marginTop: '150px', backgroundColor: 'white', textAlign: 'center' }}
+        >
+          <h2>No College Found in {props.city}</h2>
+        </div>
+        </>
+    )
+  }
+ 
+  else {
     return (
       <>
         <Snackbar
