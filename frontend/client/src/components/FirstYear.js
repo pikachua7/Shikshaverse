@@ -74,7 +74,7 @@ const FirstYear = () => {
             <br></br>
             <br></br>
             <br></br>
-            <div className='tabs'>
+            <div className='tabs' style={{fontSize:'20px'}}>
                 {tabs.map((tab, i) =>
                     <button key={i} id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>
                 )}

@@ -248,10 +248,10 @@ export default function RoomSelectionDialog(props: any) {
              
 </>
             ) : (
-              <div className="container-xxl" style={{ marginTop: '300px',fontSize:'16px' }}>
+              <div className="container-xxl" style={{fontSize:'16px' }}>
                   <img src="frontend\client\public\img\logo.png" alt="" />
                   <h2 style={{ color: 'blue' }}>Indian Institute of Technology Bombay</h2>
-                  <p>Departments</p>
+                  <p>Departments in IIT Bombay</p>
                   <button onClick={handleProfileShow} className="button btn-primary" style={{width:'120px',height:'50px',float:'right'}}>
                     Visit College
                   </button>
