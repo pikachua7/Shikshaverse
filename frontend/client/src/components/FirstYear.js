@@ -69,7 +69,7 @@ const FirstYear = () => {
 
     return (
         <div className='container' style={{paddingTop:"2.5%"}}>
-            <iframe class="ku-embed" frameborder="0" allowfullscreen allow="xr-spatial-tracking; gyroscope; accelerometer" scrolling="no" src="https://kuula.co/share/collection/7vzxT?logo=1&info=1&fs=1&vr=0&thumbs=1&inst=0" width={1300} height={800}></iframe>
+            <iframe class="ku-embed" frameborder="0" allowfullscreen allow="xr-spatial-tracking; gyroscope; accelerometer" scrolling="no" src="https://kuula.co/share/collection/7vzsj?logo=1&info=1&fs=0&vr=0&zoom=1&sd=1&thumbs=-1&alpha=0.60" width={1300} height={800}></iframe>
             <br></br>
             <br></br>
             <br></br>
