@@ -3,6 +3,7 @@ export const Features = (props) => {
     <div id='features' style={{margintop:"40px"}} className='text-center'>
       <div className='container'>
         <div className='col-md-10 col-md-offset-1 section-title'>
+          <br/>
           <h2>Features</h2>
         </div>
         <div className=''>
