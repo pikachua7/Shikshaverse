@@ -54,6 +54,7 @@ export default function WhiteboardDialog() {
         <IconButton
           aria-label="close dialog"
           className="close"
+          style={{marginTop:'90px',height:'30px',width:'30px'}}
           onClick={() => dispatch(closeWhiteboardDialog())}
         >
           <CloseIcon />

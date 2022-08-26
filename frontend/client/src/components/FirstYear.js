@@ -41,28 +41,24 @@ const FirstYear = () => {
             id: 1,
             tabTitle: 'Auditorium',
             title: 'Auditorium',
-            content: 'Las tabs se generan automáticamente a partir de un array de objetos, el cual tiene las propiedades: id, tabTitle, title y content.',
             image : audi
         },
         {
             id: 2,
             tabTitle: 'Physics Lab',
             title: 'Physics Lab',
-            content: 'Contenido de tab 2.',
             image : eighteen
         },
         {
             id: 3,
             tabTitle: 'Chemistry Lab',
             title: 'Chemistry Lab',
-            content: 'Contenido de tab 3.',
             image : ten
         },
         {
             id: 4,
             tabTitle: 'Computer Lab',
             title: 'Computer Lab',
-            content: 'Contenido de tab 4.',
             image : comp
         }
     ];
@@ -74,6 +70,10 @@ const FirstYear = () => {
     return (
         <div className='container' style={{paddingTop:"2.5%"}}>
             <iframe class="ku-embed" frameborder="0" allowfullscreen allow="xr-spatial-tracking; gyroscope; accelerometer" scrolling="no" src="https://kuula.co/share/collection/7vzxT?logo=1&info=1&fs=1&vr=0&thumbs=1&inst=0" width={1300} height={800}></iframe>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <div className='tabs'>
                 {tabs.map((tab, i) =>
                     <button key={i} id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>

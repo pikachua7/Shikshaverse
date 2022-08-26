@@ -42,6 +42,7 @@ const VideoGrid = styled.div`
   min-height: 0;
   display: grid;
   grid-gap: 10px;
+  
   grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
 
   .video-container {
@@ -76,7 +77,7 @@ const VideoGrid = styled.div`
 
 function VideoContainer({ playerName, stream }) {
   return (
-    <div className="video-container">
+    <div className="video-container" >
       <Video srcObject={stream} autoPlay></Video>
       {playerName && <div className="player-name">{playerName}</div>}
     </div>
@@ -96,15 +97,18 @@ export default function ComputerDialog() {
         <IconButton
           aria-label="close dialog"
           className="close"
-          onClick={() => dispatch(closeComputerDialog())}
+          style={{marginTop:'90px',height:'30px',width:'30px'}}
+          onClick={()=>dispatch(closeComputerDialog())}
         >
           <CloseIcon />
         </IconButton>
+        
 
         <div className="toolbar">
           <Button
             variant="contained"
-            color="secondary"
+            style={{background:'white',marginTop:'80px',color:'black',width:'200px',fontSize:'20px'}}
+
             onClick={() => {
               if (shareScreenManager?.myStream) {
                 shareScreenManager?.stopScreenShare()
