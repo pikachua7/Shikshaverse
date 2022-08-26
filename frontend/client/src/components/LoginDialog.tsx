@@ -30,7 +30,7 @@ const Wrapper = styled.form`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
+  background: #00264d  ;
   border-radius: 16px;
   padding: 36px 60px;
   box-shadow: 0px 0px 5px #0000006f;
@@ -39,7 +39,8 @@ const Wrapper = styled.form`
 const Title = styled.p`
   margin: 5px;
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
+
   text-align: center;
 `
 
@@ -72,7 +73,7 @@ const RoomDescription = styled.div`
 const SubTitle = styled.h3`
   width: 160px;
   font-size: 16px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 `
 
@@ -169,16 +170,9 @@ export default function LoginDialog() {
 
   return (
     <Wrapper onSubmit={handleSubmit}>
-      <Title>Joining</Title>
-      <RoomName>
-        <Avatar style={{ background: getColorByString(roomName) }}>
-          {getAvatarString(roomName)}
-        </Avatar>
-        <h3>{roomName}</h3>
-      </RoomName>
-      <RoomDescription>
-        <ArrowRightIcon /> {roomDescription}
-      </RoomDescription>
+      <Title>Join Virtual Tour</Title>
+      
+    
       <Content>
         <Left>
           <SubTitle>Select an avatar</SubTitle>
@@ -204,7 +198,7 @@ export default function LoginDialog() {
             fullWidth
             label="Name"
             variant="outlined"
-            color="secondary"
+            style={{color:"white"}}
             error={nameFieldEmpty}
             helperText={nameFieldEmpty && 'Name is required'}
             onInput={(e) => {
@@ -237,7 +231,7 @@ export default function LoginDialog() {
         </Right>
       </Content>
       <Bottom>
-        <Button variant="contained" color="secondary" size="large" type="submit">
+        <Button variant="contained"  size="large" type="submit" style={{width:'130px',height:'40px',fontSize:"12px"}}>
           Join Tour
         </Button>
       </Bottom>

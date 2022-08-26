@@ -148,17 +148,7 @@ export default function HelperButtonGroup() {
       <ButtonGroup>
         {roomJoined && (
           <>
-            <Tooltip title="Room Info">
-              <StyledFab
-                size="small"
-                onClick={() => {
-                  setShowRoomInfo(!showRoomInfo)
-                  setShowControlGuide(false)
-                }}
-              >
-                <ShareIcon />
-              </StyledFab>
-            </Tooltip>
+          
             <Tooltip title="Control Guide">
               <StyledFab
                 size="small"
