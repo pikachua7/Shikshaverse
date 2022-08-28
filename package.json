@@ -31,6 +31,8 @@
     "solidity-coverage": "^0.7.21"
   },
   "dependencies": {
-    "react-india-states-map": "^1.0.0"
+    "@types/smooth-scroll": "^16.1.1",
+    "react-india-states-map": "^1.0.0",
+    "smooth-scroll": "^16.1.3"
   }
 }

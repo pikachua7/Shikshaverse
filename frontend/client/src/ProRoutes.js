@@ -10,13 +10,13 @@ import 'regenerator-runtime/runtime'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@mui/material/styles'
-////import './index.scss'
 import './components/PhaserGame'
 import muiTheme from './components/MuiTheme'
 import reportWebVitals from './reportWebVitals'
 import store from './stores'
 import FirstYear from './components/FirstYear';
 import Profile from './components/Profile';
+
 function ProRoutes() {
   return (
     <div>
@@ -32,6 +32,7 @@ function ProRoutes() {
                                             </Provider>}/>
                                             <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/fy" element={<FirstYear/>}/>
+       
     </Routes>
 
 
