@@ -17,7 +17,7 @@ return (
        
        
         <div className="container-xxl py-5 ">
-        <h4 style={{color:'blue'}}>Indian Institute of Technology Bombay</h4>
+        <h4 style={{color:'blue'}}>Shree Ramdeobaba College Of Engineering and Management</h4>
         <p>
             Departments
         </p>

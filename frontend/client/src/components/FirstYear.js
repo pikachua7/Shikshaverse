@@ -31,6 +31,8 @@ import ten from './img/ten.jpg';
 import audi from './img/audi.jpg';
 import eighteen from './img/eighteen.jpg';
 import comp from './img/comp.jpg';
+import gate from './img/gate.jpg';
+
 import { Pannellum } from "pannellum-react";
 
 const FirstYear = () => {
@@ -39,24 +41,30 @@ const FirstYear = () => {
     const tabs = [
         {
             id: 1,
+            tabTitle: 'Main Gate',
+            title: 'Main Gate',
+            image : gate
+        },
+        {
+            id: 2,
             tabTitle: 'Auditorium',
             title: 'Auditorium',
             image : audi
         },
         {
-            id: 2,
+            id: 3,
             tabTitle: 'Physics Lab',
             title: 'Physics Lab',
             image : eighteen
         },
         {
-            id: 3,
+            id: 4,
             tabTitle: 'Chemistry Lab',
             title: 'Chemistry Lab',
             image : ten
         },
         {
-            id: 4,
+            id: 5,
             tabTitle: 'Computer Lab',
             title: 'Computer Lab',
             image : comp

@@ -134,7 +134,7 @@ export default function RoomSelectionDialog(props: any) {
 
 
 
-  if (!stateSelected && props.city=='Mumbai') {
+  if (!stateSelected && props.city=='Nagpur') {
     return (
 
 
@@ -161,7 +161,7 @@ export default function RoomSelectionDialog(props: any) {
 
               <tr>
                 <th scope="row">1</th>
-                <td>Indian Intstitute Of Technology Bombay.</td>
+                <td>Shree Ramdeobaba College of Engineering and Management.</td>
                 <td>
                   <button onClick={handleStateSelection} className="button btn-primary" style={{width:'120px'}}>
                     Visit College
@@ -256,8 +256,8 @@ export default function RoomSelectionDialog(props: any) {
             ) : (
               <div className="container-xxl" style={{fontSize:'16px' }}>
                   <img src="frontend\client\public\img\logo.png" alt="" />
-                  <h2 style={{ color: 'blue' }}>Indian Institute of Technology Bombay</h2>
-                  <p>Departments in IIT Bombay</p>
+                  <h2 style={{ color: 'blue' }}>Shree Ramdeobaba College Of Engineering and Management</h2>
+                  <p>Departments in Ramdeobaba College</p>
                   <button onClick={handleProfileShow} className="button btn-primary" style={{width:'120px',height:'50px',float:'right'}}>
                     Visit College
                   </button>
