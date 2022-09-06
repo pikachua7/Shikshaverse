@@ -168,9 +168,37 @@ export default function RoomSelectionDialog(props: any) {
                   </button>
                 </td>
               </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Visvesvaraya National Institute of Technology.</td>
+                <td>
+                  <button className="button btn-primary" style={{width:'120px'}}>
+                    Visit College
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Yeshwantrao Chavan College of Engineering.</td>
+                <td>
+                  <button className="button btn-primary" style={{width:'120px'}}>
+                    Visit College
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>G H Raisoni College of Engineering.</td>
+                <td>
+                  <button  className="button btn-primary" style={{width:'120px'}}>
+                    Visit College
+                  </button>
+                </td>
+              </tr>
+         
               <br />
              
-            </tbody>
+            </tbody> 
           </table>
         </div>
 
